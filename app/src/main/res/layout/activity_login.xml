@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:padding="16dp">
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/pic"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textSize="36sp"
+    android:layout_marginTop="20dp"
+    android:layout_alignParentTop="true"
+    fontPath="fonts/Roboto-Medium.ttf"
+    android:text="@string/health"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:elevation="10dp"
+            android:translationZ="10dp"
+            fontPath="fonts/Roboto-Medium.ttf"
+            android:textSize="16sp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:stateListAnimator="@null"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/signin"/>
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:elevation="3dp"
+            android:translationZ="3dp"
+            android:layout_marginBottom="3dp"
+            fontPath="fonts/Roboto-Medium.ttf"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:background="@color/white"
+            android:text="@string/start"/>
+    </LinearLayout>
+
+</RelativeLayout>
