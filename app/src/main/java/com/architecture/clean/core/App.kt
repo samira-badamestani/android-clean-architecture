@@ -1,6 +1,8 @@
 package com.architecture.clean.core
 
 
+import android.content.Context
+import android.support.multidex.MultiDex
 import com.architecture.clean.R
 import com.architecture.clean.di.component.DaggerCoreComponent
 import dagger.android.AndroidInjector
@@ -22,5 +24,9 @@ class App : DaggerApplication() {
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         )
+    }
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
     }
 }

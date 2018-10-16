@@ -11,7 +11,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
-abstract class SingleUseCase<T>(private val errorUtil: DomainErrorUtil) : UseCase<Single<T>>() {
+abstract class SingleUseCase<T>( val errorUtil: DomainErrorUtil) : UseCase<Single<T>>() {
 
     fun execute(
             compositeDisposable: CompositeDisposable,
