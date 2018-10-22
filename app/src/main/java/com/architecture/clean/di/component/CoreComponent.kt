@@ -4,6 +4,7 @@ import android.app.Application
 import com.architecture.clean.core.App
 import com.architecture.clean.di.builder.ActivityBuilder
 import com.architecture.clean.di.module.ContextModule
+import com.architecture.clean.di.module.DataBaseModule
 import com.architecture.clean.di.module.NetworkModule
 import dagger.BindsInstance
 import dagger.Component
@@ -12,7 +13,7 @@ import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AndroidSupportInjectionModule::class, NetworkModule::class,  ActivityBuilder::class, ContextModule::class])
+@Component(modules = [AndroidSupportInjectionModule::class, NetworkModule::class,  ActivityBuilder::class, ContextModule::class,DataBaseModule::class])
 interface CoreComponent : AndroidInjector<App> {
 
     @Component.Builder

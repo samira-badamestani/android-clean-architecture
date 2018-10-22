@@ -37,7 +37,6 @@ class  HomeFragment: DaggerFragment(), HomeCallBack {
     private val viewModel: HomeViewModel by lazy { ViewModelProviders.of(this,viewModelFactory).get(HomeViewModel::class.java) }
     val adapter : HomeAdapter by lazy { HomeAdapter(arrayListOf(),this) }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        Log.e(TAG, "homeFragment onCreateView")
         val binding : FragmentHomeBinding= DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.setLifecycleOwner(this)
         binding.viewModel=viewModel

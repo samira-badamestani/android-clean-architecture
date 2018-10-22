@@ -14,19 +14,19 @@ import com.architecture.clean.ui.home.callback.HomeCallBack
 class HomeAdapter(
         private var items: ArrayList<Food> = arrayListOf<Food>(),
         private val callback: HomeCallBack
-) : RecyclerView.Adapter<HomeAdapter.SimpleVideoHolder>() {
+) : RecyclerView.Adapter<HomeAdapter.SimpleHolder>() {
     override fun getItemCount(): Int = items.size
 
-    override fun onBindViewHolder(holder: SimpleVideoHolder, position: Int) {
+    override fun onBindViewHolder(holder: SimpleHolder, position: Int) {
         holder.onBind(items[position])
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleVideoHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleHolder {
         val binding  = FoodItemRowBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-        return SimpleVideoHolder(binding)
+        return SimpleHolder(binding)
     }
 
-    inner class SimpleVideoHolder(dataBinding: ViewDataBinding)
+    inner class SimpleHolder(dataBinding: ViewDataBinding)
         : DataBindingViewHolder<Food>(dataBinding)  {
         override fun onBind(t: Food): Unit = with(t) {
             dataBinding.setVariable(item,t)
