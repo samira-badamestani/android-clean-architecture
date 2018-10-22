@@ -26,7 +26,7 @@ class GetHomeUseCaseTest {
     lateinit var getHomeUseCase: GetHomeUseCase
 
     @Test
-    fun `execute should get a flowable instance from repository`() {
+    fun `execute should get a single instance from repository`() {
         // GIVEN
         val mockedSingle = mock<Single<FoodDto>>()
         whenever(appRepository.getHome()).thenReturn(mockedSingle)
